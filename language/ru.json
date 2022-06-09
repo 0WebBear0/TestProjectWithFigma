@@ -1,0 +1,27 @@
+{
+  "Home": "Главная",
+  "Search": "Поиск",
+  "Add": "Добавить",
+  "TypeOfEquipment": "Тип оборудования",
+  "SerialNumber": "Серийный номер",
+  "Note": "Примечание",
+  "ShowAll": "Показать всё",
+
+  "CompleteTheField":"Заполните поле",
+  "SelectField":"Выберите поле",
+
+  "Submit": "Отправить",
+  "Reset": "Очистить",
+
+  "ModalAddForm": "Форма добавления",
+  "ModalEditForm": "Форма исправления",
+
+  "NotesIsEmpty": "Записи пустые, добавьте новые",
+  "NotesIsNotFound": "Записи не найдены",
+
+  "SearchBySerialNumber": "Поиск по СН",
+  "SearchByTypeOfEquipment": "Поиск по ТО",
+  "SearchInProgress": "В режиме поиска",
+
+  "Exit": "Выход"
+}
