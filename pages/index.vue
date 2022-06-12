@@ -1,21 +1,33 @@
 <template>
-  <div class="row flex-column base-template">
-    test
+  <div class="admin-panel">
+    <Sidebar/>
+    <div class="base-place">
+
+    </div>
   </div>
 </template>
 
 <script>
 
+import Sidebar from "~/components/UI/Sidebar";
 export default {
   name: 'IndexPage',
-
-
+  components: {Sidebar},
 }
 </script>
 
-<style>
-.base-template{
+<style scoped >
+.admin-panel{
   display: flex;
-  gap: 10px;
+  flex-direction: row;
+  height: 100%;
+
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.base-place{
+  margin-left: 53px;
+  width: 100%;
+  background-color: #EB4141;
 }
 </style>
