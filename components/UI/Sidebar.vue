@@ -7,45 +7,47 @@
     </div>
 
     <div class="sidebar__item-selected">
-      <IconBalance/>
-      <div class="text-blue text-size18">Баланс</div>
+      <div class="sidebar__item-selected-balance">
+        <IconBalance/>
+        <div class="text-blue text-size18" style="padding-left: 4px">Баланс</div>
+      </div>
       <IconArrow/>
     </div>
 
     <div class="sidebar__item">
-      <div class="text-light text-size18">Услуги</div>
       <IconStock/>
+      <div class="text-light text-size18" style="padding-left: 2px">Услуги</div>
     </div>
 
     <div class="sidebar__item">
-      <div class="text-light text-size18">Акции</div>
       <IconTask/>
+      <div class="text-light text-size18" style="padding-left: 5px">Акции</div>
     </div>
 
     <div class="sidebar__item">
-      <div class="text-light text-size18">Новости</div>
       <IconNews/>
+      <div class="text-light text-size18" style="padding-left: 3px">Новости</div>
     </div>
 
 
     <div class="sidebar__item">
-      <div class="text-light text-size18">FAQ</div>
       <IconQuestion/>
+      <div class="text-light text-size18">FAQ</div>
     </div>
 
     <div class="sidebar__item">
-      <div class="text-light text-size18">О нас</div>
       <IconAboutUs/>
+      <div class="text-light text-size18">О нас</div>
     </div>
 
     <div class="sidebar__item">
-      <div class="text-light text-size18">Договор</div>
       <IconContract/>
+      <div class="text-light text-size18">Договор</div>
     </div>
 
     <div class="sidebar__item">
-      <div class="text-light text-size18">Напарники</div>
       <IconSetting/>
+      <div class="text-light text-size18">Напарники</div>
     </div>
 
 
@@ -79,6 +81,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  min-width: 207px;
 
   &__private-area{
     display: flex;
@@ -100,12 +103,18 @@ export default {
     background-color: $white-color;
     border-radius: 4px;
     padding: 8px 16px 8px 16px;
+
+    &-balance{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
   }
 
   &__item{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 25px;
     align-items: center;
     background-color: #FFFFFF33;
     border-radius: 4px;

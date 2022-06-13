@@ -2,7 +2,7 @@
   <div class="admin-panel">
     <Sidebar/>
     <div class="base-place">
-
+      <BaseContent/>
     </div>
   </div>
 </template>
@@ -10,9 +10,10 @@
 <script>
 
 import Sidebar from "~/components/UI/Sidebar";
+import BaseContent from "~/components/UI/BaseContent";
 export default {
   name: 'IndexPage',
-  components: {Sidebar},
+  components: {BaseContent, Sidebar},
 }
 </script>
 
@@ -28,6 +29,5 @@ export default {
 .base-place{
   margin-left: 53px;
   width: 100%;
-  background-color: #EB4141;
 }
 </style>

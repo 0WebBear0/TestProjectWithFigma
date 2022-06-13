@@ -27,13 +27,40 @@ body {
       font-weight: 500;
     }
 
+    &-size20{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-size30{
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &-size40{
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+
   //colors
   &-light{
     color: $light-color;
   }
-
+  &-red{
+    color: $red-color;
+  }
   &-blue{
     color: $blue-color;
+  }
+  &-purple{
+    color: $purple-color;
+  }
+  &-green{
+    color: $green-color;
   }
 
   //helpers

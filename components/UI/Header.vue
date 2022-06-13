@@ -1,64 +1,70 @@
 <template>
   <div class="header">
-    <IconLogo/>
-    <div class="header__weather">
-      <IconWeather/>
 
-      <div class="header__weather-text">
-        <div class="text-base text-light">Казань +16</div>
+    <div class="header__left">
+      <IconLogo/>
+      <div class="header__weather">
+        <IconWeather/>
 
-        <div class="text-little text-light">Облачно с прояснениями</div>
-      </div>
-    </div>
+        <div class="header__weather-text">
+          <div class="text-base text-light">Казань +16</div>
 
-    <div class="header__rate">
-
-      <div class="header__rate-main">
-        <div class="text-light">USD / RUB</div>
-        <div class="header__rate-main__bottom">
-          <div class="text-light">+0,05</div>
-          <IconRate/>
-        </div>
-      </div>
-      <div class="header__rate-selector"></div>
-
-      <div class="header__rate-main">
-        <div class="text-light text-center">71,25</div>
-        <div class="header__rate-main__bottom">
-          <div class="text-light text-little" style="opacity: 0.6">Продажа</div>
+          <div class="text-little text-light">Облачно с прояснениями</div>
         </div>
       </div>
 
-      <div class="header__rate-main">
-        <div class="text-light text-center">70,55</div>
-        <div class="header__rate-main__bottom">
-          <div class="text-light text-little" style="opacity: 0.6">Покупка</div>
+      <div class="header__rate">
+
+        <div class="header__rate-main">
+          <div class="text-light">USD / RUB</div>
+          <div class="header__rate-main__bottom">
+            <div class="text-light">+0,05</div>
+            <IconRate/>
+          </div>
+        </div>
+        <div class="header__rate-selector"></div>
+
+        <div class="header__rate-main">
+          <div class="text-light text-center">71,25</div>
+          <div class="header__rate-main__bottom">
+            <div class="text-light text-little" style="opacity: 0.6">Продажа</div>
+          </div>
+        </div>
+
+        <div class="header__rate-main">
+          <div class="text-light text-center">70,55</div>
+          <div class="header__rate-main__bottom">
+            <div class="text-light text-little" style="opacity: 0.6">Покупка</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header__right">
+      <div class="header__user-layout">
+        <div class="header__user-item">
+          <IconBell/>
+          <div class="text-light">+3</div>
+        </div>
+
+        <div class="header__user-item">
+          <IconGuard/>
+          <div class="text-light">+6</div>
+
+        </div>
+
+        <IconMessage/>
+
+        <div class="text-light">Профиль Папа</div>
+
+        <div>
+          <IconUser/>
+          <IconTriangle/>
         </div>
       </div>
-
     </div>
 
-    <div class="header__user-layout">
-      <div class="header__user-item">
-        <IconBell/>
-        <div class="text-light">+3</div>
-      </div>
-
-      <div class="header__user-item">
-        <IconGuard/>
-        <div class="text-light">+6</div>
-
-      </div>
-
-      <IconMessage/>
-
-      <div class="text-light">Профиль Папа</div>
-
-      <div>
-        <IconUser/>
-        <IconTriangle/>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -85,10 +91,21 @@ export default {
 
   justify-content: space-between;
 
+  &__left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  &__right{
+
+  }
   &__weather{
     display: flex;
     flex-direction: row;
     gap: 15px;
+    padding-left: 65px;
+
     &-text{
       display: flex;
       flex-direction: column;
