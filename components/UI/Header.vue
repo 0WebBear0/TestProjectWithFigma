@@ -39,28 +39,30 @@
         </div>
 
       </div>
-    </div>
 
+    </div>
+    <div class="header__menu">
+      <IconMenu @click.native="$store.commit('menu/SET_MENU')"/>
+      <div class="text-white">Меню</div>
+    </div>
     <div class="header__right">
       <div class="header__user-layout">
-        <div class="header__user-item">
-          <IconBell/>
+        <div class="header__user-item header_scalable">
+          <IconBell class="header_scalable"/>
           <div class="text-light">+3</div>
         </div>
 
-        <div class="header__user-item">
-          <IconGuard/>
-          <div class="text-light">+6</div>
+        <div class="header__user-item header_scalable">
+          <IconGuard class="header_scalable"/>
+          <div class="text-light header_scalable">+6</div>
 
         </div>
+          <IconMessage class="header_scalable"/>
+        <div class="text-light header__right-profile">Профиль Папа</div>
 
-        <IconMessage/>
-
-        <div class="text-light">Профиль Папа</div>
-
-        <div>
-          <IconUser/>
-          <IconTriangle/>
+        <div class="header__right_user-place">
+          <IconUser class="header_scalable-avatar"/>
+          <IconTriangle class="header_scalable"/>
         </div>
       </div>
     </div>
@@ -77,9 +79,11 @@ import IconGuard from "~/components/icons/IconGuard";
 import IconMessage from "~/components/icons/IconMessage";
 import IconUser from "~/components/icons/IconUser";
 import IconTriangle from "~/components/icons/IconTriangle";
+import IconMenu from "~/components/icons/IconMenu";
+
 export default {
   name: "Header",
-  components: {IconTriangle, IconUser, IconMessage, IconGuard, IconBell, IconRate, IconWeather, IconLogo},
+  components: {IconMenu, IconTriangle, IconUser, IconMessage, IconGuard, IconBell, IconRate, IconWeather, IconLogo},
 }
 </script>
 
@@ -98,7 +102,16 @@ export default {
     gap: 20px;
   }
   &__right{
+    &_user-place{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+    }
+  }
 
+  &__menu{
+    display: none;
   }
   &__weather{
     display: flex;
@@ -151,6 +164,55 @@ export default {
       flex-direction: row;
       align-items: center;
       gap: 3px;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .header{
+    display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+    justify-content: space-between;
+    width: 100vw;
+
+    background: linear-gradient(111.12deg, #667EEA 0.31%, #4B54A2 99.48%);
+    z-index: -1;
+
+    &__left{
+      display: none;
+    }
+    &__right{
+
+      &-profile{
+        display: none;
+      }
+
+      &_user-place{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+      }
+    }
+    &__menu{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+    &_scalable{
+      height: 1.2rem;
+      font-size: 0.9rem;
+    }
+    &_scalable-avatar{
+      height: 2rem;
+      font-size: 0.9rem;
+    }
+    &__user-layout{
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
     }
   }
 }

@@ -21,6 +21,12 @@ body {
     font-weight: 300;
   }
 
+    &-size14{
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+
     &-size18{
       font-size: 18px;
       line-height: 21px;
@@ -68,4 +74,9 @@ body {
     display: flex;
     justify-content: center;
   }
+}
+
+.selector{
+  opacity: 0.2;
+  border: 0.5px solid $dark-color;
 }
